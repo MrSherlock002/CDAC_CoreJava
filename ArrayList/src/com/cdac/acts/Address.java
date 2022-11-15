@@ -6,6 +6,7 @@ public class Address {
 	private String line3;
 	private String pinCode;
 
+
 	public Address() {
 		super();
 	}
