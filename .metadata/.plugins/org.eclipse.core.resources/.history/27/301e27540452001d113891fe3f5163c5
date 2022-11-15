@@ -1,0 +1,8 @@
+package com.acts.enums;
+
+public enum PEnum {
+	CAT,
+	DOG,
+	RABBIT,
+	FISH
+}

@@ -1,0 +1,8 @@
+package com.acts;
+
+public class MyCustomExceptions extends Exception {
+	public MyCustomExceptions(String s) {
+		super(s);
+	}
+	}
+}

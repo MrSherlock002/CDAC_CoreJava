@@ -1,0 +1,24 @@
+package com.acts;
+
+import java.time.LocalDate;
+import java.util.LinkedList;
+
+import com.acts.ValidationUtils;
+
+public class DataUtils {
+	public static LinkedList<Library> getLibList(){
+		LinkedList<Library> bookList = new LinkedList<Library>();
+		
+				return bookList;
+	}
+	
+	LocalDate validDate1 = ValidationUtils.validateDate("2000-10-10");
+	LocalDate validDate2 = ValidationUtils.validateDate("2000-04-04");
+	LocalDate validDate3 = ValidationUtils.validateDate("2000-02-02");
+	LocalDate validDate4 = ValidationUtils.validateDate("2000-01-01");
+	
+//	public Library(String iSBN, String bookTitle, String bookPrice, LocalDate publishedDate, String authorName,
+//			Integer quantity)
+	bookList.add(new Library("1","Let us Java","430",validDate1,"Y.Kanetkar",""));
+	
+}

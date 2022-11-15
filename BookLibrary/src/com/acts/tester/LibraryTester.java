@@ -1,0 +1,97 @@
+package com.acts.tester;
+
+import java.time.LocalDate;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+import com.acts.DataUtils;
+import com.acts.Library;
+import com.acts.ValidationUtils;
+import com.acts.exceptions.LibraryExceptions;
+
+public class LibraryTester {
+
+	public static void main(String[] args) throws LibraryExceptions{
+
+		LinkedList<Library> libraryList = DataUtils.getLibList();
+		String ISBN;
+		String bookTitle;
+		String bookPrice;
+		String publishedDate;
+		String authorName;
+		Integer quantity;
+
+		int choice;
+		Scanner sc = new Scanner(System.in);
+		do {
+			System.out.println("1.Add book.\n"
+					+ "2. Display All books\n"
+					+ "3. Issue book to student\n"
+					+ "4. Take book return\n"
+					+ "5. Remove book\n"
+					+ "0. Exit\n\n"
+					+ "Enter your choice : ");
+			choice = sc.nextInt();
+			switch(choice) {
+			case 1:
+				//add book
+				System.out.println("Enter book ISBN : ");
+				ISBN = sc.next();
+				System.out.println("Enter book name : ");
+				bookTitle = sc.next();
+				System.out.println("Enter book price : ");
+				bookPrice = sc.next();
+				System.out.println("Enter a author name : ");
+				authorName = sc.next();
+				System.out.println("Enter book quantity : ");
+				quantity = sc.nextInt();
+				System.out.println("Enter publish date : ");
+				publishedDate = sc.next();	
+
+				LocalDate d = ValidationUtils.validateDate(publishedDate);
+
+				Library libObj = new Library(ISBN, bookTitle, bookPrice,d , authorName, quantity);
+				break;
+
+			case 2:
+
+				System.out.println("Books Available in Library : ");
+				libraryList.forEach((x) -> {System.out.println(x);});
+
+				break;
+
+			case 3:
+
+				System.out.println("Enter book ISBN : ");
+				String currentIsbn = sc.next();
+				Library x= DataUtils.findByISBN(libraryList, currentIsbn);
+				System.out.println("Enter quantity :");
+				int qty = sc.nextInt();
+
+				x.setQuantity(x.getQuantity()-qty);
+				break;
+			case 4:
+				System.out.println("Enter book ISBN : ");
+				String currentIsbn1 = sc.next();
+				Library x1= DataUtils.findByISBN(libraryList, currentIsbn1);
+				
+				System.out.println("Enter quantity :");
+				int qty1 = sc.nextInt();
+
+				x1.setQuantity(x1.getQuantity()+qty1);
+				break;
+				
+			case 5:
+				System.out.println("Enter book ISBN to remove :");
+				String DeleteISBN = sc.next();
+				 DataUtils.deleteByISBN(libraryList, DeleteISBN);
+				break;
+				
+			case 0 :
+				System.exit(0);
+			}	
+		}while(choice!=0);
+
+	}
+
+}

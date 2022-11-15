@@ -1,0 +1,41 @@
+package com.acts;
+
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.LinkedList;
+public class BankUtils {
+	public static HashMap<String,Bank> getBankList(){
+		HashMap<String,Bank> list = new HashMap<String,Bank>();
+		
+		LocalDate validDate1 = ValidationUtils.validateDate("2000-01-01");
+		LocalDate validDate2 = ValidationUtils.validateDate("2000-02-02");
+		LocalDate validDate3 = ValidationUtils.validateDate("2000-03-03");
+		LocalDate validDate4 = ValidationUtils.validateDate("2000-04-04");
+		
+		new Bank(null, null, null, null);
+		list.put("2", new Bank("2", "Prasad", "1000",validDate1));
+		list.put("1", new Bank("1", "Abhi", "2000",validDate2));
+		list.put("3", new Bank("3", "Sanket", "3000",validDate3));
+		list.put("5", new Bank("5", "Aditya", "4000",validDate3));
+		list.put("4", new Bank("4", "Basavraj", "5000", validDate4));
+		return list;
+	}
+	public static Bank findByAccNo(LinkedList<Bank> list, Integer tempAccNo) {
+		for(Bank a : list) {
+			if(tempAccNo.equals(a.getUserAccNo())) {
+				return a;
+			}
+		}
+	return null;
+	}
+	
+	public static Bank deleteByAccNo(LinkedList<Bank> list, Integer tempAccNo) {
+		for(Bank a : list) {
+			if(tempAccNo.equals(a.getUserAccNo())) {
+				return a;
+			}
+		}
+	return null;
+	}
+
+}

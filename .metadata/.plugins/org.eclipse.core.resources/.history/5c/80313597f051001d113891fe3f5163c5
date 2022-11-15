@@ -1,0 +1,15 @@
+package com.acts.validator;
+
+import java.time.LocalDate;
+
+public class DataValidator {
+
+	public static LocalDate gradDateValidator(String str) {
+		LocalDate gradDate = LocalDate.parse(str);
+		LocalDate today = LocalDate.now();
+		if(gradDate.isBefore(today)) {
+			return gradDate;
+		}
+		return null;
+	}
+}

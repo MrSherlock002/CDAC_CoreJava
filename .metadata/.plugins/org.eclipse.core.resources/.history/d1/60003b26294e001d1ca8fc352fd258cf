@@ -1,0 +1,13 @@
+package com.acts;
+
+import java.util.LinkedList;
+
+public class BankUtils {
+	public static LinkedList<Bank> getBankList(){
+		LinkedList<Bank> list = new LinkedList<>();
+		
+		
+		return list;
+	}
+
+}

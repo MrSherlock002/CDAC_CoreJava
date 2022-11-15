@@ -1,0 +1,19 @@
+package com.acts;
+
+import java.util.ArrayList;
+
+import com.acts.tester.ShopTester;
+
+public class GenerateBill {
+
+	public int total_bill;
+//	public int bill(ArrayList<Integer> s) {
+		public int bill() {
+		Stock stockObj = new Stock();
+		ShopTester shopObj = new ShopTester();	
+		
+		total_bill = stockObj.pen_price+ stockObj.notebook_price+stockObj.biskit_price+stockObj.milk_price;
+		
+		return total_bill;
+	}
+}

@@ -1,0 +1,15 @@
+package com.acts.tester;
+
+import java.util.LinkedList;
+
+import com.acts.Library;
+
+public class DataUtils {
+	public static LinkedList<Library> getLibList(){
+		LinkedList<Library> bookList = new LinkedList<Library>();
+		
+				return bookList;
+	}
+	
+
+}

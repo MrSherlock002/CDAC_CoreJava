@@ -1,0 +1,24 @@
+package com.acts;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+public class DataUtils {
+	public List<Integer> addData() {
+
+		// Create an ArrayList object
+		List<Integer> list = new ArrayList<Integer>(); 
+
+		List<Integer> x =Arrays.asList(5,10,5,50,5,10,5,50);
+		//		list.add(new Stock());
+		//		list.add(new Stock());
+		
+		//Stock(pen,pen_price,notebook,notebook_price,biskit,biskit_price, milk,milk_price)
+		new Stock(5,10,5,50,5,10,5,50);
+		
+		return x;
+	}
+
+}

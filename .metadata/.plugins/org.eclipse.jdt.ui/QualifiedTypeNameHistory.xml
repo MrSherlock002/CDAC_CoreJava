@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.acts.Account"/>
+    <fullyQualifiedTypeName name="java.util.ListIterator"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="com.acts.Student"/>
+    <fullyQualifiedTypeName name="com.acts.Course"/>
+    <fullyQualifiedTypeName name="com.acts.Address"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="Comparators.CourseComparator"/>
+    <fullyQualifiedTypeName name="Comparators.NameComparator"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Collection"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="com.acts.Stock"/>
+    <fullyQualifiedTypeName name="com.acts.BankUtils"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="com.acts.comparators.NameComparator"/>
+    <fullyQualifiedTypeName name="com.acts.comparators.AccOpeningDateComparator"/>
+    <fullyQualifiedTypeName name="com.acts.comparators.AccBalanceComparator"/>
+    <fullyQualifiedTypeName name="com.acts.comparators.AccNoComparator"/>
+    <fullyQualifiedTypeName name="com.acts.BankExceptions"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="com.acts.Library"/>
+    <fullyQualifiedTypeName name="com.acts.ValidationUtils"/>
+    <fullyQualifiedTypeName name="com.acts.exceptions.LibraryExceptions"/>
+    <fullyQualifiedTypeName name="com.acts.DataUtils"/>
+    <fullyQualifiedTypeName name="com.acts.Degree"/>
+    <fullyQualifiedTypeName name="com.acts.Bank"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="com.acts.Utils.DataUtils"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.acts.validator.DataValidator"/>
+    <fullyQualifiedTypeName name="com.acts.JobSeeker"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.acts.Pet"/>
+    <fullyQualifiedTypeName name="com.acts.enums.PetEnum"/>
+    <fullyQualifiedTypeName name="com.acts.Order"/>
+    <fullyQualifiedTypeName name="com.acts.enums.OrderEnums"/>
+</qualifiedTypeNameHistroy>

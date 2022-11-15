@@ -1,0 +1,103 @@
+package com.acts;
+
+import java.time.LocalDate;
+import java.util.Comparator;
+
+public class Bank {
+	public String userAccNo;
+	public String userName;
+	//public String dateOfOpening;
+	LocalDate dateOfOpening;
+	public String userBalance;
+	public String totalBankBalance;
+	
+	public Bank() {
+		super();
+	}
+	
+	public Bank(String userAccNo, String userName, String userBalance,LocalDate dateOfOpening) {
+		super();
+		this.userAccNo = userAccNo;
+		this.userName = userName;
+		this.dateOfOpening = dateOfOpening;
+		this.userBalance = userBalance;
+	}
+	
+	public String getUserAccNo() {
+		return userAccNo;
+	}
+	public void setUserAccNo(String userAccNo) {
+		this.userAccNo = userAccNo;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public LocalDate getdateOfOpening() {
+		return dateOfOpening;
+	}
+	public void setdateOfOpening(LocalDate dateOfOpening) {
+		this.dateOfOpening = dateOfOpening;
+	}
+	public String getUserBalance() {
+		return userBalance;
+	}
+	public void setUserBalance(String userBalance) {
+		this.userBalance = userBalance;
+	}
+	public String getTotalBankBalance() {
+		return totalBankBalance;
+	}
+/////////////////////////////////////////////////////////////////////////////
+	
+	
+
+//public static Comparator<Bank> AccNoComparator = new Comparator<Bank>() {
+//	
+//	@Override
+//	public int compare(Bank o1, Bank o2) {
+//		return o1.getUserAccNo().compareTo(o2.getUserAccNo());
+//	}
+//
+//};
+//
+//public static Comparator<Bank> NameComparator = new Comparator<Bank>() {
+//	
+//	@Override
+//	public int compare (Bank o1, Bank o2) {
+//		return o1.getUserName().compareTo(o2.getUserName());
+//	}
+//};
+//	
+//
+//public static Comparator<Bank> AccOpeningDateComparator = new Comparator<Bank>() {
+//	
+//	@Override
+//	public int compare(Bank o1, Bank o2) {
+//		return o1.getdateOfOpening().compareTo(o2.getdateOfOpening());
+//	}
+//
+//};
+//
+//public static Comparator<Bank> AccBalanceComparator = new Comparator<Bank>() {
+//	
+//	@Override
+//	public int compare(Bank o1, Bank o2) {
+//		return o1.getUserBalance().compareTo(o2.getUserBalance());
+//	}
+//};
+
+
+
+	
+/////////////////////////////////////////////////////////////////////////////	
+	
+	@Override
+	public String toString() {
+		return "Bank [userAccNo=" + userAccNo + ", userName=" + userName + ", dateOfOpening=" + dateOfOpening + ", userBalance="
+				+ userBalance + "]"+"\n";
+	}
+	
+}

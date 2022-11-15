@@ -1,0 +1,32 @@
+package com.cdac.acts;
+import java.util.regex.Pattern; 
+
+public class StringRev {
+
+	public String stringReverse(String s) {
+		
+		 // Specifying the pattern to be searched 
+        Pattern pattern = Pattern.compile("\\s"); 
+ 
+        // splitting String str with a pattern 
+        // (i.e )splitting the string whenever their 
+        // is whitespace and store in temp array. 
+        String[] temp = pattern.split(s); 
+        String result = ""; 
+ 
+        // Iterate over the temp array and store 
+        // the string in reverse order. 
+        for (int i = 0; i < temp.length; i++) { 
+            if (i == temp.length - 1) 
+                result = temp[i] + result; 
+            else
+                result = " " + temp[i] + result; 
+        } 
+        return result; 
+	}
+	
+	public StringBuilder StringReverse1(String s) {
+		 StringBuilder reverseString = new StringBuilder(s);
+		 return reverseString.reverse();
+	}
+}

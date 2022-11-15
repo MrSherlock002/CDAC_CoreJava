@@ -1,0 +1,10 @@
+package Comparators;
+
+public class DobComparator implements Comprator<Student> {
+	
+	@override
+	public int compare (Student o1, Student o2) {
+		return o1.getDob().compareTo(o2.getDob());
+	}
+
+}

@@ -1,0 +1,131 @@
+package com.acts;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+public class Bank implements Comparable<Bank> {
+	
+	public static final String EMPTY_STRING = "";
+	
+	private double totalAmount;
+	private String accountNo;
+	private String balance;
+	private String username;
+	private LocalDate dob;
+	//Student has Addresses one to many Aggregation/Assocaiation
+	//Egar init
+	//private List<Address> addressList = new ArrayList<Address>();
+	private List<Address> addressList;
+	
+	public Bank() {
+		super();
+	}
+
+	public Bank(double totalAmount, String accountNo, String balance, String username, LocalDate dob,
+			List<Address> addressList) {
+		super();
+		this.totalAmount = totalAmount;
+		this.accountNo = accountNo;
+		this.balance = balance;
+		this.username = username;
+		this.dob = dob;
+		this.addressList = addressList;
+	}
+
+	
+	public double getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(double totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public String getAccountNo() {
+		return accountNo;
+	}
+
+	public void setAccountNo(String accountNo) {
+		this.accountNo = accountNo;
+	}
+
+	public String getBalance() {
+		return balance;
+	}
+
+	public void setBalance(String balance) {
+		this.balance = balance;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public List<Address> getAddressList() {
+		return addressList;
+	}
+
+	public void setAddressList(List<Address> addressList) {
+		this.addressList = addressList;
+	}
+
+	public static String getEmptyString() {
+		return EMPTY_STRING;
+	}
+
+	public LocalDate getDob() {
+		return dob;
+	}
+
+	public void setDob(LocalDate dob) {
+		this.dob = dob;
+	}
+
+	public List<Address> getAddresses() {
+		return addressList;
+	}
+	
+	
+	
+	/////////////////////////////////////////////////////////////////
+
+	public void addAddress(Address address) {
+		if(null == addressList) {
+			//Lazy creattion of List
+			this.addressList = new ArrayList<Address>();
+		}
+		this.addressList.add(address);
+	}
+
+	
+	@Override
+	public String toString() {
+		return "Bank [totalAmount=" + totalAmount + ", accountNo=" + accountNo + ", balance=" + balance + ", username="
+				+ username + ", dob=" + dob + ", addressList=" + addressList + "]";
+	}
+
+	
+	@Override
+	public int compareTo(Bank o) {
+		return this.accountNo.compareTo(o.accountNo); // ASC
+		//return o.accountNo.compareTo(this.accountNo); // DSC
+	}
+	
+	  //Student to Object if we pass student
+	  
+	@Override
+	public boolean equals(Object obj) {
+		System.out.println("Equals called");
+		if( obj instanceof Bank) {
+			Bank other = (Bank) obj;
+			return this.getAccountNo() == other.getAccountNo();
+		} 
+		return false;
+	}
+}

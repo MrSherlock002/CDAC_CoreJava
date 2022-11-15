@@ -1,0 +1,17 @@
+package com.acts.accountTester;
+import java.util.Scanner;
+public class AccountTester {
+
+	public static void main(String[] args) {
+		
+		int[] arr = new int[5];
+		arr[0] = 5;
+		System.out.println("Enter the number of users");
+		Scanner sc = new Scanner(System.in);
+		int input = sc.nextInt();
+	    int count = 0;
+	    Account[] user = new Account[input];
+	    
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.acts;
+
+public class Pet {
+
+	private String petId;
+	private String name;
+	private PetEnum category;
+	private double unitPrice;
+	private int Stocks;
+	
+	
+}

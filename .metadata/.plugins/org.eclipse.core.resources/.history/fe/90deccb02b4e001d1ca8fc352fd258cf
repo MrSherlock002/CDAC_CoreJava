@@ -1,0 +1,33 @@
+package com.acts;
+
+import java.time.LocalDate;
+import java.util.LinkedList;
+import java.util.List;
+
+public class BankUtils {
+	public static LinkedList<Bank> getBankList(){
+		LinkedList<Bank> list = new LinkedList<>();
+		
+		LocalDate validDate1 = ValidationUtils.validateDate("2000-01-01");
+		LocalDate validDate2 = ValidationUtils.validateDate("2000-02-02");
+		LocalDate validDate2 = ValidationUtils.validateDate("2000-03-03");
+		LocalDate validDate2 = ValidationUtils.validateDate("2000-04-04");
+		
+		new Bank(null, null, null, null);
+		list.add(new Bank("1", "Prasad", "1000",));
+		list.add(new Bank("2", "Abhi", "2000"));
+		list.add(new Bank("3", "Sanket", "3000"));
+		list.add(new Bank("4", "Aditya", "4000",validDate1));
+		list.add(new Bank("5", "Basavraj", "5000", validDate2));
+		return list;
+	}
+	public static Bank findByAccNo(List<Bank>list, Integer accNo) {
+		for(Bank a : list) {
+			if(accNo.equals(a.getUserAccNo())) {
+				return a;
+			}
+		}
+		return null;
+	}
+
+}

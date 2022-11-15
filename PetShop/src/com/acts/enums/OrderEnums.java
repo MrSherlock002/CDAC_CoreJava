@@ -1,0 +1,8 @@
+package com.acts.enums;
+
+public enum OrderEnums {
+	PLACED,
+	IN_PROGRESS,
+	COMPLETED
+
+}

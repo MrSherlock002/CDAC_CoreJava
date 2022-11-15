@@ -1,0 +1,10 @@
+package com.cdac;
+
+public class StudentData implements pass {
+
+	private String studName;
+	private String studRollNo;
+	
+	
+	
+}

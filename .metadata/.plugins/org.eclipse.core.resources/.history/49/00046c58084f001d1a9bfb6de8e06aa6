@@ -1,0 +1,11 @@
+package com.acts;
+
+public class MyCustomExceptions extends Exception {
+	public MyCustomExceptions(String s) {
+		super(s);
+	}
+	
+	public minBalException (String s) {
+		super(s);
+	}
+}

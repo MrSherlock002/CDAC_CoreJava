@@ -1,0 +1,6 @@
+package com.acts;
+
+public class JobSeeker {
+//registrationId, name, email, password, dateOfBirth, aadharId, phone number,  graduationDate, degree(enum)
+	
+}

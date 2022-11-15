@@ -1,0 +1,17 @@
+package com.acts.comparators;
+
+import java.sql.Statement;
+import java.time.LocalDate;
+import java.util.Comparator;
+
+import com.acts.Bank;
+
+
+public class DobComparator implements Comparator<Bank> {
+
+	@Override
+	public LocalDate compare(Bank o1, Bank o2) {
+		return o1.getDob().compareTo(o2.getDob());
+	}
+
+}

@@ -1,0 +1,86 @@
+package com.acts.tester;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+import com.acts.Degree;
+
+public class JobTester {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int choice;
+
+
+		String registrantionId;
+		String name;
+		String email;
+		String password;
+		String graduationDate;
+		String aadharId;
+		String phone;
+		Degree degree;
+		LocalDate dateOfBirth;
+
+
+		//		1 JobSeeker registration
+		//		//TODO Get all details and validate data if it is valid then add in list
+		//		2 Update email 
+		//		//Get old and new email from user
+		//		3 Display all job seeker by their degree type. take degree from user
+		//		4 Sort JobSeeker details as per email ( comparable)
+		//		5 Sort JobSeeker details as per dob ( Comparator)
+		//		6 Sort customer details  as per graduationDate ( Comparator)
+
+
+		do {
+			System.out.println("1. Add\n "
+					+ "2. Update Email\n"
+					+ "3. Get old and new email from user.\n"
+					+ "4. Sort email.\n"
+					+ "5. Sort DOB \n "
+					+ "6. Sort GraduationDate\n"
+					+ "7. Exit.\n\n"
+					+ "Enter your choice : \n");
+			choice = sc.nextInt();
+
+			switch(choice) {
+			case 1:
+				System.out.println("Enter your RegistrantionId : ");
+				registrantionId = sc.next();
+				
+				System.out.println("Enter your name :");
+				name = sc.next();
+				
+				System.out.println("Enter your email : ");
+				email = sc.next();
+				
+				System.out.println("Enter Password : ");
+				
+			break;
+
+			case 2:
+				break;
+
+			case 3:
+				break;
+
+			case 4:
+				break;
+			case 5:
+				break;
+			case 6:
+				break;
+			case 7:
+				System.exit(0);
+			}
+
+
+		}
+		while(choice!=0);
+
+
+
+
+	}
+}

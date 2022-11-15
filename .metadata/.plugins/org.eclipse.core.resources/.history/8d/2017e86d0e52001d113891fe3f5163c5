@@ -1,0 +1,82 @@
+package com.acts.tester;
+
+import java.util.Scanner;
+
+import com.acts.enums.PetEnum;
+
+public class PetTester {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String choice;
+		String password,username;
+		int flag=0;
+		
+		String petId;
+		String name;
+		String category;
+		double unitPrice;
+		int Stocks;
+		
+		do {
+			System.out.println("a. Login.\n \n"
+					+ "b. Add new Pet.\n"
+					+ "c. Update pet details.\n"
+					+ "d. Display all available pets.\n"
+					+ "e. Order a pet.\n"
+					+ "f. Check order status by order ID.\n"
+					+ "g. Update order status.\n"
+					+ "h. Exit\n\n"
+					+ "Enter your choice : \n");
+			choice = sc.next();
+			
+			switch(choice) {
+			case ("a"):
+				System.out.println("Enter a username : ");
+				username = sc.next();
+			
+				System.out.println("Enter a password : ");
+				password = sc.next();
+				if(username=="admin"&& password=="admin") {
+					flag = 1;
+				}
+				else if(username=="c1"&& password=="c1") {
+					flag=0;
+				}
+				break;
+				
+			case ("b"):
+				if(flag==1) {
+					System.out.println("Enter a pet ID : ");
+					petId = sc.next();
+					System.out.println("Enter a pet name : ");
+					name = sc.next();
+					System.out.println("Enter a category : ");
+					category = sc.next();
+					System.out.println("Enter a pet price : ");
+					unitPrice = sc.nextDouble();
+					System.out.println("Enter a pet stock : ");
+					
+				}
+				
+				break;
+			case ("c"):
+				break;
+			case ("d"):
+				break;
+			case ("e"):
+				break;
+			case("f"):
+				break;
+			case ("g"):
+				break;
+			case ("h"):
+				System.exit(0);
+				break;				
+			}
+			
+			
+		}while(choice!="h");
+	}
+}

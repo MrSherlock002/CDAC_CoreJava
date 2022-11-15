@@ -1,0 +1,8 @@
+package com.acts;
+
+public class Bank {
+	public String userAccNo;
+	public String userName;
+	public String userBalance;
+	public String totalBankBalance;
+}

@@ -1,0 +1,18 @@
+package com.acts;
+
+import java.time.LocalDate;
+
+public class ValidationUtils {
+
+	public static LocalDate validateDate(String strDate) {
+		LocalDate date = LocalDate.parse(strDate);
+		
+		LocalDate today = LocalDate.now();
+		LocalDate requiredDate = today.minusYears(21);
+		
+		if(date.isBefore(requiredDate)) {
+			return date;
+		}
+		return null;
+	}
+}

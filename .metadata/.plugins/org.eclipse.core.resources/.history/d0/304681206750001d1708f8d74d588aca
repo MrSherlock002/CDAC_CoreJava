@@ -1,0 +1,21 @@
+package com.acts;
+
+import java.time.LocalDate;
+
+public class Library {
+//
+//	1. Use HashSet
+//	Book details : title,bookType(enum),price,publishedDate ,authorName,quantity
+//	Unique ID : book title
+//	Get data from user and store Books in Hashset
+
+	private String ISBN;
+	private String bookTitle;
+	private String bookPrice;
+	private LocalDate publishedDate;
+	private String authorName;
+	private String quantity;
+	
+	
+	
+}

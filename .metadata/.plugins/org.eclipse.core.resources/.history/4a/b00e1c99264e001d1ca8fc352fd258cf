@@ -1,0 +1,22 @@
+package com.acts;
+
+public class Bank {
+	public String userAccNo;
+	public String userName;
+	public String myDate;
+	public String userBalance;
+	public String totalBankBalance;
+	public Bank() {
+		super();
+	}
+	public Bank(String userAccNo, String userName, String myDate, String userBalance) {
+		super();
+		this.userAccNo = userAccNo;
+		this.userName = userName;
+		this.myDate = myDate;
+		this.userBalance = userBalance;
+	}
+	
+	
+	
+}

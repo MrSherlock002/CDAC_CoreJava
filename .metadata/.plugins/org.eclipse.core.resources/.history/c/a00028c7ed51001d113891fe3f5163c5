@@ -1,0 +1,147 @@
+package com.acts.tester;
+
+import java.time.LocalDate;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+import com.acts.Degree;
+import com.acts.JobSeeker;
+
+public class JobTester {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		LinkedList<JobSeeker> list = new LinkedList<JobSeeker>();
+
+		int choice;
+
+		String registrantionId;
+		String name;
+		String email;
+		String password;
+		String graduationDate;
+		String aadharId;
+		String phone;
+		String degree;
+		String dateOfBirth;
+		do {
+			System.out.println("1.Add\n "
+					+ "2. Update Email\n"
+					+ "3. Display all job seeker by their degree type. (CIVIL,MECHANICAL,IT,CSE)\n"
+					+ "4. Sort email.\n"
+					+ "5. Sort DOB \n "
+					+ "6. Sort GraduationDate\n"
+					+ "7. Print all elements.\n"
+					+ "0. Exit.\n\n"
+					+ "Enter your choice : \n");
+			choice = sc.nextInt();
+
+			switch(choice) {
+			case 1:
+				System.out.println("Enter your RegistrantionId : ");
+				registrantionId = sc.next();
+
+				System.out.println("Enter your name :");
+				name = sc.next();
+
+				System.out.println("Enter your email : ");
+				email = sc.next();
+
+				System.out.println("Enter Password : ");
+				password = sc.next();
+
+				System.out.println("Enter graduation Date : ");
+				graduationDate = sc.next();
+
+				System.out.println("Enter your AadharId : ");
+				aadharId = sc.next();
+
+				System.out.println("Enter your Phone : ");
+				phone = sc.next();
+
+				System.out.println("Enter your Degree : ");
+				degree = sc.next();
+
+				System.out.println("Enter your date of birth : ");
+				dateOfBirth =sc.next();		
+				//				
+				//				(String registrantionId, String name, String email, String password, LocalDate graduationDate,
+				//						String aadharId, String phone, Degree degree, LocalDate dateOfBirth)
+
+				JobSeeker jobObj = new JobSeeker(registrantionId, name, email, password,LocalDate.parse(graduationDate) ,aadharId, phone, Degree.valueOf(degree), LocalDate.parse(dateOfBirth));
+				list.add(jobObj);
+
+				break;
+
+			case 2:
+				System.out.println("Enter a Reg ID to update the mail : ");
+				String temp = sc.next();
+				list.forEach((a)-> {
+					if(a.getRegistrantionId()==temp) {
+						System.out.println("Enter new mail to update : ");
+						String newMail = sc.next();
+						a.setEmail(newMail);
+						System.out.println("new mail ID successully updated.");
+					}
+				});
+
+				break;
+
+			case 3:
+				System.out.println("Enter a branch which you want to Display : (CIVIL,MECHANICAL,IT,CSE) ");
+				String deg = sc.next();
+				list.forEach((a -> {
+					if(a.getDegree()==Degree.valueOf(deg)) {
+						System.out.println(a.toString());
+					}
+				})); 
+				
+				break;
+
+			case 4:
+
+				Collections.sort(list, new Comparator<JobSeeker>() {
+
+					@Override
+					public int compare(JobSeeker j1, JobSeeker j2) {
+						return j1.getEmail().compareTo(j2.getEmail());
+					}
+				});
+				break;
+
+			case 5:
+				Collections.sort(list, new Comparator<JobSeeker>() {
+
+					@Override
+					public int compare(JobSeeker j1, JobSeeker j2) {
+						return j1.getDateOfBirth().compareTo(j2.getDateOfBirth());
+					}
+				});
+				break;
+			case 6:
+				Collections.sort(list, new Comparator<JobSeeker>() {
+
+					@Override
+					public int compare(JobSeeker j1, JobSeeker j2) {
+						return j1.getGraduationDate().compareTo(j2.getGraduationDate());
+					}
+				});
+				break;
+				
+			case 7:
+				System.out.println("Here is the list of elements :");
+				for((JobSeeker x : list) {
+					System.out.println(x.toString());
+				});
+				break;
+				
+			case 0:
+				sc.close();
+				System.exit(0);
+			}
+		}
+		while(choice!=0);
+	}
+}

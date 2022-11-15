@@ -1,0 +1,5 @@
+package com.acts.validator;
+
+public class DataValidator {
+
+}

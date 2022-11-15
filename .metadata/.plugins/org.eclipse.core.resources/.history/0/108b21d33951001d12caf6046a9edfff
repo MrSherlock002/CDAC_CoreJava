@@ -1,0 +1,18 @@
+package com.acts;
+
+import java.time.LocalDate;
+
+public class JobSeeker {
+//registrationId, name, email, password, dateOfBirth, aadharId, phone number,  graduationDate, degree(enum)
+
+	private String registrantionId;
+	private String name;
+	private String email;
+	private String password;
+	private String graduationDate;
+	private String aadharId;
+	private String phone;
+	private Degree degree;
+	private LocalDate dateOfBirth;
+	
+}

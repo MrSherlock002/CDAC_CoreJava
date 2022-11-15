@@ -1,0 +1,44 @@
+package com.acts.tester;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class LibraryTester {
+
+	public static void main(String[] args) {
+		//		1 Add book. 
+		//		2 Display All books
+		//		3 Allot book to student ( quantity -1)
+		//		4 Take book return ( quantity +1)
+		//		5 Remove book
+		
+		String ISBN;
+		String bookTitle;
+		String bookPrice;
+		LocalDate publishedDate;
+		String authorName;
+		String quantity;
+
+		int choice;
+		Scanner sc = new Scanner(System.in);
+		do {
+			System.out.println("1.Add book.\n"
+					+ "2. Display All books\n"
+					+ "3. Issue book to student\n"
+					+ "4. Take book return\n"
+					+ "5. Remove book\n"
+					+ "0. Exit\n\n"
+					+ "Enter your choice : ");
+			choice = sc.nextInt();
+			switch(choice) {
+			case 1:
+				//add book
+				System.out.println("Enter book name : ");
+				
+			}
+
+		}while(choice!=0);
+
+	}
+
+}

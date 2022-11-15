@@ -1,0 +1,25 @@
+package com.cdac.acts.tester;
+
+import com.cdac.acts.StringRev;
+import java.util.Scanner;
+
+public class StringReverseTester {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		String input;
+		
+		System.out.println("Enter String : ");
+		input = sc.nextLine();
+		
+		StringRev sr = new StringRev();
+		String result =sr.stringReverse(input);
+		System.out.println(result);
+		
+		//String result = sr.stringReverse1.toString();
+		
+		sr.StringReverse1(input);
+		System.out.println(result);
+	}
+
+}

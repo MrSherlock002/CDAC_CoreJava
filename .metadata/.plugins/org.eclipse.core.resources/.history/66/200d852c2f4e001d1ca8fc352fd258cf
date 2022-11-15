@@ -1,0 +1,62 @@
+package com.acts;
+
+import java.time.LocalDate;
+
+public class Bank {
+	public String userAccNo;
+	public String userName;
+	//public String myDate;
+	LocalDate myDate;
+	public String userBalance;
+	public String totalBankBalance;
+	
+	public Bank() {
+		super();
+	}
+	
+	public Bank(String userAccNo, String userName, String userBalance,LocalDate myDate) {
+		super();
+		this.userAccNo = userAccNo;
+		this.userName = userName;
+		this.myDate = myDate;
+		this.userBalance = userBalance;
+	}
+	
+	public String getUserAccNo() {
+		return userAccNo;
+	}
+	public void setUserAccNo(String userAccNo) {
+		this.userAccNo = userAccNo;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public LocalDate getMyDate() {
+		return myDate;
+	}
+	public void setMyDate(LocalDate myDate) {
+		this.myDate = myDate;
+	}
+	public String getUserBalance() {
+		return userBalance;
+	}
+	public void setUserBalance(String userBalance) {
+		this.userBalance = userBalance;
+	}
+	public String getTotalBankBalance() {
+		return totalBankBalance;
+	}
+//	public void setTotalBankBalance(String totalBankBalance) {
+//		this.totalBankBalance = totalBankBalance;
+//	}
+
+	@Override
+	public String toString() {
+		return "Bank [userAccNo=" + userAccNo + ", userName=" + userName + ", myDate=" + myDate + ", userBalance="
+				+ userBalance + "]\n";
+	}
+	
+}

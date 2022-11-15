@@ -1,0 +1,104 @@
+package com.acts.tester;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.acts.Cart;
+import com.acts.DataUtils;
+import com.acts.GenerateBill;
+
+public class ShopTester {
+
+	public static void main(String[] args) {
+		int total_bill;
+		
+		List<Integer> mycart = new ArrayList<>();
+		List<Integer> productqty = new ArrayList<>();
+		
+		DataUtils x = new DataUtils();
+		{System.out.println(x.addData());}
+
+		Scanner sc = new Scanner(System.in);
+		String name;
+		String address;
+		int choice;
+		int qty;
+
+	
+		System.out.println("Enter your name : ");
+		name = sc.nextLine();
+
+		System.out.println("Enter your address : ");
+		address = sc.nextLine();
+
+		//object of Cart class.
+		Cart mycartobj = new Cart();
+
+		do {
+			System.out.println("\n 1.Buy Pen\n "
+					+ "2. Buy Notebook \n "
+					+ "3. Buy Biskit \n"
+					+ "4. Buy Milk\n"
+					+ "5. Generate Bill"
+					+ "0. Exit");
+			choice = sc.nextInt();
+
+			switch(choice) {
+			case 1 :
+				System.out.println("Enter quantity : ");
+				qty = sc.nextInt();
+				mycart.add(choice);
+				mycart.add(qty);
+				productqty.add(qty);
+				
+				break;
+
+			case 2 : 
+				System.out.println("Enter quantity : ");
+				qty = sc.nextInt();
+				mycart.add(choice);
+				mycart.add(qty);
+				productqty.add(qty);
+				break;
+
+			case 3 :
+				System.out.println("Enter quantity : ");
+				qty = sc.nextInt();
+				mycart.add(choice);
+				mycart.add(qty);
+				productqty.add(qty);
+				break;
+				
+
+			case 4:
+				System.out.println("Enter quantity : ");
+				qty = sc.nextInt();
+				mycart.add(choice);
+				mycart.add(qty);
+				productqty.add(qty);
+				break;
+				
+			case 5:
+				GenerateBill b = new GenerateBill();
+				System.out.println("Your Bill : "+b.bill());
+			case 0 :
+
+				System.exit(0);
+			default:
+				System.out.println("Enter correct input....");
+
+			}
+			{System.out.println(mycart);}
+
+		}while(choice!=0);
+		
+		
+		GenerateBill generatebillObj = new GenerateBill();
+		total_bill = generatebillObj.bill();
+		System.out.println("Total bill = "+total_bill);
+		System.out.println(name);
+		System.out.println(address);
+	
+	}
+}

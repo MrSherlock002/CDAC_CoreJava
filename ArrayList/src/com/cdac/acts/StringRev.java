@@ -1,0 +1,25 @@
+package com.cdac.acts;
+import java.util.Scanner;
+import java.util.regex.Pattern; 
+
+public class StringRev {
+
+	public void stringReverse() {
+		Scanner sc = new Scanner(System.in);
+		String input;
+		
+		System.out.println("Enter String : ");
+		input = sc.nextLine();
+		
+		String s[] = input.split(" ");
+//		String s[] = "i like this program very much".split(" ");
+		String ans = "";
+		for (int i = s.length - 1; i >= 0; i--)
+		{
+			ans += s[i] + " ";
+		}
+		System.out.println("Reversed String:");
+		System.out.println(ans.substring(0,
+				ans.length() - 1));
+	}
+}
